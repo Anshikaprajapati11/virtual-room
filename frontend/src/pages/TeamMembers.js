@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 import {
   Mail,
   Globe,
-  Code2,
+ 
 } from "lucide-react";
 
 import {
