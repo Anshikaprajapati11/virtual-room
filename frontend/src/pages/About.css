@@ -1,0 +1,1186 @@
+/* =========================================================
+   VIRTUAL ROOM — ABOUT PAGE
+   Teal + Midnight Theme
+========================================================= */
+
+/* ---------- Base ---------- */
+
+.about-page {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  color: #17302e;
+
+  background:
+    radial-gradient(
+      circle at 10% 15%,
+      rgba(45, 212, 191, 0.10),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(20, 184, 166, 0.08),
+      transparent 30%
+    ),
+    #f3f8f7;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+.about-page * {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.about-hero {
+  position: relative;
+  width: 100%;
+  min-height: 430px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 80px 24px;
+
+  text-align: center;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(45, 212, 191, 0.20),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(20, 184, 166, 0.18),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #083f3b,
+      #0b5c55,
+      #0f766e
+    );
+
+  color: white;
+}
+
+.about-hero::before {
+  content: "";
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  top: -150px;
+  right: -100px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(167, 243, 236, 0.15);
+
+  box-shadow:
+    0 0 60px rgba(45, 212, 191, 0.10);
+}
+
+.about-hero::after {
+  content: "";
+  position: absolute;
+
+  width: 220px;
+  height: 220px;
+
+  bottom: -120px;
+  left: -80px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(167, 243, 236, 0.12);
+}
+
+.about-hero-content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 900px;
+  margin: auto;
+}
+
+
+/* ---------- Tag ---------- */
+
+.about-tag {
+  display: inline-block;
+
+  margin-bottom: 18px;
+
+  padding: 7px 15px;
+
+  border: 1px solid rgba(167, 243, 236, 0.30);
+  border-radius: 30px;
+
+  background: rgba(255, 255, 255, 0.07);
+
+  color: #a9e9e2;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+
+/* ---------- Hero Heading ---------- */
+
+.about-hero h1 {
+  margin: 0 auto 22px;
+
+  max-width: 850px;
+
+  font-size: clamp(2.5rem, 6vw, 4.6rem);
+
+  line-height: 1.08;
+  font-weight: 750;
+
+  letter-spacing: -1.5px;
+}
+
+.about-hero h1 span {
+  display: block;
+
+  color: #5eead4;
+
+  text-shadow:
+    0 0 25px rgba(45, 212, 191, 0.20);
+}
+
+
+/* ---------- Hero Paragraph ---------- */
+
+.about-hero p {
+  max-width: 700px;
+
+  margin: 0 auto;
+
+  font-size: 1.08rem;
+  line-height: 1.8;
+
+  color: #d8faf5;
+}
+
+
+/* =========================================================
+   COMMON SECTION
+========================================================= */
+
+.about-section {
+  width: min(1120px, calc(100% - 48px));
+
+  margin: 0 auto;
+
+  padding: 90px 0;
+}
+
+
+/* ---------- Section Heading ---------- */
+
+.section-heading {
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  margin-bottom: 40px;
+}
+
+.section-heading > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: rgba(20, 184, 166, 0.10);
+
+  color: #0f766e;
+
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+.section-heading h2 {
+  margin: 0;
+
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+
+  color: #175a54;
+
+  letter-spacing: -0.5px;
+}
+
+
+/* =========================================================
+   ABOUT PROJECT
+========================================================= */
+
+.about-project-grid {
+  display: grid;
+
+  grid-template-columns: 1.5fr 1fr;
+
+  gap: 50px;
+
+  align-items: stretch;
+}
+
+.about-project-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-project-text p {
+  margin: 0 0 20px;
+
+  font-size: 1.05rem;
+
+  line-height: 1.85;
+
+  color: #557b76;
+}
+
+.about-project-text p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ---------- Highlight ---------- */
+
+.about-highlight {
+  position: relative;
+
+  padding: 38px;
+
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.95),
+      rgba(231, 250, 247, 0.85)
+    );
+
+  border: 1px solid rgba(20, 184, 166, 0.15);
+
+  box-shadow:
+    0 15px 40px rgba(15, 118, 110, 0.08);
+
+  overflow: hidden;
+}
+
+.about-highlight::after {
+  content: "";
+
+  position: absolute;
+
+  width: 150px;
+  height: 150px;
+
+  right: -70px;
+  bottom: -70px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(20, 184, 166, 0.15);
+}
+
+.highlight-icon {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 22px;
+
+  border-radius: 15px;
+
+  background: rgba(20, 184, 166, 0.12);
+
+  color: #0f766e;
+
+  font-size: 1.5rem;
+}
+
+.about-highlight h3 {
+  margin: 0 0 12px;
+
+  font-size: 1.45rem;
+
+  color: #17302e;
+}
+
+.about-highlight p {
+  margin: 0;
+
+  color: #557b76;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   FEATURES
+========================================================= */
+
+.features-section {
+  width: 100%;
+  max-width: none;
+
+  padding-left: max(24px, calc((100% - 1120px) / 2));
+  padding-right: max(24px, calc((100% - 1120px) / 2));
+
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.feature-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+.feature-card {
+  position: relative;
+
+  padding: 32px;
+
+  min-height: 245px;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.88);
+
+  border: 1px solid rgba(13, 148, 136, 0.12);
+
+  box-shadow:
+    0 10px 30px rgba(15, 23, 42, 0.06);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-7px);
+
+  border-color: rgba(20, 184, 166, 0.30);
+
+  box-shadow:
+    0 18px 40px rgba(13, 148, 136, 0.12);
+}
+
+.feature-number {
+  position: absolute;
+
+  top: 22px;
+  right: 24px;
+
+  font-size: 0.75rem;
+
+  font-weight: 800;
+
+  color: rgba(15, 118, 110, 0.35);
+}
+
+.feature-icon {
+  width: 55px;
+  height: 55px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 22px;
+
+  border-radius: 16px;
+
+  background: rgba(20, 184, 166, 0.10);
+
+  font-size: 1.6rem;
+}
+
+.feature-card h3 {
+  margin: 0 0 10px;
+
+  color: #175a54;
+
+  font-size: 1.25rem;
+}
+
+.feature-card p {
+  margin: 0;
+
+  color: #557b76;
+
+  font-size: 0.95rem;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   CONTRIBUTION
+========================================================= */
+
+.contribution-section {
+  padding-bottom: 70px;
+}
+
+.contribution-card {
+  display: flex;
+
+  gap: 30px;
+
+  align-items: flex-start;
+
+  padding: 38px;
+
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.95),
+      rgba(235, 250, 248, 0.85)
+    );
+
+  border: 1px solid rgba(20, 184, 166, 0.15);
+
+  box-shadow:
+    0 12px 35px rgba(15, 23, 42, 0.06);
+}
+
+.contribution-icon {
+  width: 65px;
+  height: 65px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 18px;
+
+  background: rgba(20, 184, 166, 0.12);
+
+  color: #0f766e;
+}
+
+.contribution-card h3 {
+  margin: 0 0 15px;
+
+  font-size: 1.4rem;
+
+  color: #175a54;
+}
+
+.contribution-card p {
+  margin: 0 0 14px;
+
+  color: #557b76;
+
+  line-height: 1.8;
+}
+
+.contribution-card p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   TECHNOLOGY
+========================================================= */
+
+.technology-section {
+  padding-top: 40px;
+}
+
+.tech-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 18px;
+}
+
+.tech-card {
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+
+  padding: 25px;
+
+  border-radius: 17px;
+
+  background: rgba(255, 255, 255, 0.82);
+
+  border: 1px solid rgba(20, 184, 166, 0.12);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.tech-card:hover {
+  transform: translateY(-5px);
+
+  border-color: rgba(20, 184, 166, 0.28);
+}
+
+.tech-card strong {
+  color: #175a54;
+
+  font-size: 1.05rem;
+}
+
+.tech-card span {
+  color: #6a8b87;
+
+  font-size: 0.82rem;
+}
+
+
+/* =========================================================
+   FUTURE SCOPE
+========================================================= */
+
+.future-section {
+  width: 100%;
+  max-width: none;
+
+  padding-left: max(24px, calc((100% - 1120px) / 2));
+  padding-right: max(24px, calc((100% - 1120px) / 2));
+
+  background:
+    radial-gradient(
+      circle at 15% 50%,
+      rgba(45, 212, 191, 0.12),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #083f3b,
+      #0b5c55
+    );
+
+  color: white;
+}
+
+.future-content {
+  max-width: 1120px;
+
+  margin: auto;
+}
+
+.future-content .about-tag {
+  color: #a9e9e2;
+}
+
+.future-content h2 {
+  max-width: 750px;
+
+  margin: 0 0 22px;
+
+  font-size: clamp(2rem, 5vw, 3.5rem);
+
+  line-height: 1.15;
+}
+
+.future-content h2 span {
+  color: #5eead4;
+}
+
+.future-content p {
+  max-width: 750px;
+
+  margin: 0 0 28px;
+
+  color: #d8faf5;
+
+  font-size: 1rem;
+
+  line-height: 1.8;
+}
+
+.future-badge {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 10px 18px;
+
+  border-radius: 30px;
+
+  border: 1px solid rgba(167, 243, 236, 0.25);
+
+  background: rgba(255, 255, 255, 0.06);
+
+  color: #a9e9e2;
+
+  font-size: 0.85rem;
+
+  font-weight: 700;
+}
+
+
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact-section {
+  text-align: center;
+}
+
+.contact-content {
+  max-width: 700px;
+
+  margin: auto;
+}
+
+.contact-content .about-tag {
+  color: #0f766e;
+
+  background: rgba(20, 184, 166, 0.08);
+
+  border-color: rgba(20, 184, 166, 0.15);
+}
+
+.contact-content h2 {
+  margin: 0 0 15px;
+
+  font-size: clamp(2rem, 5vw, 3rem);
+
+  color: #17302e;
+}
+
+.contact-content h2 span {
+  color: #0f766e;
+}
+
+.contact-content p {
+  margin: 0 auto 30px;
+
+  max-width: 600px;
+
+  color: #557b76;
+
+  line-height: 1.7;
+}
+
+
+/* ---------- Contact Icons ---------- */
+
+.contact-links {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 16px;
+}
+
+.contact-link {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(20, 184, 166, 0.09);
+
+  border: 1px solid rgba(20, 184, 166, 0.18);
+
+  color: #0f766e;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.contact-link:hover {
+  transform: translateY(-5px);
+
+  background: #0f766e;
+
+  color: white;
+
+  box-shadow:
+    0 8px 22px rgba(13, 148, 136, 0.22);
+}
+
+
+/* ---------- Portfolio Disabled ---------- */
+
+.contact-link-disabled {
+  cursor: default;
+
+  opacity: 0.55;
+}
+
+.contact-link-disabled:hover {
+  transform: none;
+
+  background: rgba(20, 184, 166, 0.09);
+
+  color: #0f766e;
+
+  box-shadow: none;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.about-footer {
+  padding: 35px 20px;
+
+  text-align: center;
+
+  background: #071f27;
+
+  color: #8eb5b0;
+}
+
+.about-footer p {
+  margin: 0 0 6px;
+
+  color: #d8faf5;
+
+  font-size: 1rem;
+
+  font-weight: 700;
+}
+
+.about-footer span {
+  font-size: 0.85rem;
+}
+
+
+/* =========================================================
+   DARK THEME
+   ThemeContext uses data-theme="dark" on <html>
+========================================================= */
+
+html[data-theme="dark"] .about-page {
+  color: #e5fdf9;
+
+  background:
+    radial-gradient(
+      circle at 10% 15%,
+      rgba(20, 184, 166, 0.10),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(45, 212, 191, 0.07),
+      transparent 30%
+    ),
+    #07131f;
+}
+
+
+/* ---------- Dark Section Heading ---------- */
+
+html[data-theme="dark"] .section-heading > span {
+  background: rgba(45, 212, 191, 0.10);
+
+  color: #5eead4;
+}
+
+html[data-theme="dark"] .section-heading h2 {
+  color: #a9e9e2;
+}
+
+
+/* ---------- Dark About ---------- */
+
+html[data-theme="dark"] .about-project-text p {
+  color: #8eb5b0;
+}
+
+html[data-theme="dark"] .about-highlight {
+  background: rgba(12, 34, 48, 0.88);
+
+  border-color: rgba(45, 212, 191, 0.12);
+
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.25);
+}
+
+html[data-theme="dark"] .highlight-icon {
+  background: rgba(45, 212, 191, 0.10);
+
+  color: #5eead4;
+}
+
+html[data-theme="dark"] .about-highlight h3 {
+  color: #d8faf5;
+}
+
+html[data-theme="dark"] .about-highlight p {
+  color: #8eb5b0;
+}
+
+
+/* ---------- Dark Features ---------- */
+
+html[data-theme="dark"] .features-section {
+  background: rgba(7, 19, 31, 0.65);
+}
+
+html[data-theme="dark"] .feature-card {
+  background: rgba(12, 34, 48, 0.88);
+
+  border-color: rgba(45, 212, 191, 0.12);
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+html[data-theme="dark"] .feature-card:hover {
+  border-color: rgba(45, 212, 191, 0.28);
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.32);
+}
+
+html[data-theme="dark"] .feature-number {
+  color: rgba(94, 234, 212, 0.35);
+}
+
+html[data-theme="dark"] .feature-icon {
+  background: rgba(45, 212, 191, 0.10);
+}
+
+html[data-theme="dark"] .feature-card h3 {
+  color: #a9e9e2;
+}
+
+html[data-theme="dark"] .feature-card p {
+  color: #8eb5b0;
+}
+
+
+/* ---------- Dark Contribution ---------- */
+
+html[data-theme="dark"] .contribution-card {
+  background: rgba(12, 34, 48, 0.88);
+
+  border-color: rgba(45, 212, 191, 0.12);
+
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.25);
+}
+
+html[data-theme="dark"] .contribution-icon {
+  background: rgba(45, 212, 191, 0.10);
+
+  color: #5eead4;
+}
+
+html[data-theme="dark"] .contribution-card h3 {
+  color: #a9e9e2;
+}
+
+html[data-theme="dark"] .contribution-card p {
+  color: #8eb5b0;
+}
+
+
+/* ---------- Dark Technology ---------- */
+
+html[data-theme="dark"] .tech-card {
+  background: rgba(12, 34, 48, 0.88);
+
+  border-color: rgba(45, 212, 191, 0.12);
+}
+
+html[data-theme="dark"] .tech-card:hover {
+  border-color: rgba(45, 212, 191, 0.28);
+}
+
+html[data-theme="dark"] .tech-card strong {
+  color: #a9e9e2;
+}
+
+html[data-theme="dark"] .tech-card span {
+  color: #8eb5b0;
+}
+
+
+/* ---------- Dark Contact ---------- */
+
+html[data-theme="dark"] .contact-content .about-tag {
+  color: #5eead4;
+
+  background: rgba(45, 212, 191, 0.08);
+
+  border-color: rgba(45, 212, 191, 0.15);
+}
+
+html[data-theme="dark"] .contact-content h2 {
+  color: #d8faf5;
+}
+
+html[data-theme="dark"] .contact-content h2 span {
+  color: #5eead4;
+}
+
+html[data-theme="dark"] .contact-content p {
+  color: #8eb5b0;
+}
+
+html[data-theme="dark"] .contact-link {
+  background: rgba(45, 212, 191, 0.08);
+
+  border-color: rgba(45, 212, 191, 0.18);
+
+  color: #5eead4;
+}
+
+html[data-theme="dark"] .contact-link:hover {
+  background: #0f766e;
+
+  color: white;
+}
+
+html[data-theme="dark"] .contact-link-disabled:hover {
+  background: rgba(45, 212, 191, 0.08);
+
+  color: #5eead4;
+}
+
+
+/* =========================================================
+   RESPONSIVE — 900px
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .about-project-grid {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .tech-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE — 768px
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .about-hero {
+    min-height: 390px;
+
+    padding: 65px 20px;
+  }
+
+  .about-hero h1 {
+    font-size: 2.6rem;
+
+    letter-spacing: -1px;
+  }
+
+  .about-hero p {
+    font-size: 0.98rem;
+  }
+
+  .about-section {
+    width: min(100% - 36px, 1120px);
+
+    padding: 65px 0;
+  }
+
+  .features-section,
+  .future-section {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .section-heading {
+    margin-bottom: 30px;
+  }
+
+  .section-heading h2 {
+    font-size: 1.8rem;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-card {
+    min-height: auto;
+  }
+
+  .contribution-card {
+    flex-direction: column;
+
+    padding: 30px;
+
+    gap: 20px;
+  }
+
+  .future-content h2 {
+    font-size: 2.3rem;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE — 480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .about-hero {
+    min-height: 360px;
+
+    padding: 55px 18px;
+  }
+
+  .about-tag {
+    font-size: 0.68rem;
+
+    letter-spacing: 1.5px;
+
+    padding: 6px 12px;
+  }
+
+  .about-hero h1 {
+    font-size: 2.15rem;
+
+    line-height: 1.12;
+  }
+
+  .about-hero p {
+    font-size: 0.92rem;
+
+    line-height: 1.65;
+  }
+
+  .about-section {
+    width: calc(100% - 30px);
+
+    padding: 50px 0;
+  }
+
+  .features-section,
+  .future-section {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .section-heading {
+    gap: 10px;
+  }
+
+  .section-heading > span {
+    width: 36px;
+    height: 36px;
+
+    font-size: 0.75rem;
+  }
+
+  .section-heading h2 {
+    font-size: 1.55rem;
+  }
+
+  .about-project-text p {
+    font-size: 0.95rem;
+  }
+
+  .about-highlight {
+    padding: 28px;
+  }
+
+  .feature-card {
+    padding: 27px;
+  }
+
+  .contribution-card {
+    padding: 25px;
+  }
+
+  .tech-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .future-content h2 {
+    font-size: 2rem;
+  }
+
+  .future-content p {
+    font-size: 0.93rem;
+  }
+
+  .contact-content p {
+    font-size: 0.93rem;
+  }
+
+  .contact-links {
+    gap: 12px;
+  }
+
+  .contact-link {
+    width: 48px;
+    height: 48px;
+  }
+
+  .about-footer {
+    padding: 30px 15px;
+  }
+}

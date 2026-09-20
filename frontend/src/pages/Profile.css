@@ -1,0 +1,698 @@
+
+/* =========================================================
+   PROFILE PAGE — TEAL THEME
+   ========================================================= */
+
+.profile-container {
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      circle at 15% 15%,
+      rgba(45, 212, 191, 0.07),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 85% 85%,
+      rgba(20, 184, 166, 0.05),
+      transparent 30%
+    ),
+    #f3f8f7;
+
+  color: #23403d;
+  transition: background 0.35s ease, color 0.35s ease;
+}
+
+.profile-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* =========================================================
+   PROFILE HEADER
+   ========================================================= */
+
+.profile-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 2rem;
+
+  background: white;
+  border-radius: 15px;
+
+  border: 1px solid rgba(13, 148, 136, 0.12);
+
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.08),
+    0 0 18px rgba(13, 148, 136, 0.04);
+
+  transition:
+    background 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.profile-header h1 {
+  font-size: 2.5rem;
+
+  /* Darker soft teal */
+  color: #159f91;
+
+  /* Subtle glow */
+  text-shadow:
+    0 0 5px rgba(21, 159, 145, 0.18),
+    0 0 10px rgba(21, 159, 145, 0.07);
+
+  transition:
+    color 0.35s ease,
+    text-shadow 0.35s ease;
+}
+
+/* =========================================================
+   PROFILE SECTION
+   ========================================================= */
+
+.profile-section {
+  background: white;
+  border-radius: 15px;
+
+  padding: 2rem;
+  margin-bottom: 2rem;
+
+  border: 1px solid rgba(13, 148, 136, 0.10);
+
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.08),
+    0 0 15px rgba(13, 148, 136, 0.03);
+
+  transition:
+    background 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+/* =========================================================
+   SECTION HEADER
+   ========================================================= */
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.section-header h2 {
+  color: #315b56;
+  font-size: 1.5rem;
+}
+
+/* =========================================================
+   EDIT BUTTON
+   ========================================================= */
+
+.edit-btn {
+  background: linear-gradient(
+    135deg,
+    #26b8a9,
+    #159f91
+  );
+
+  color: white;
+
+  border: none;
+  padding: 0.6rem 1.5rem;
+
+  border-radius: 25px;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  box-shadow:
+    0 4px 10px rgba(13, 148, 136, 0.15);
+}
+
+.edit-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 6px 14px rgba(13, 148, 136, 0.22);
+}
+
+/* =========================================================
+   PROFILE INFO
+   ========================================================= */
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.info-item {
+  display: flex;
+
+  padding: 1rem;
+
+  background: #f7faf9;
+
+  border-radius: 8px;
+
+  border: 1px solid rgba(13, 148, 136, 0.06);
+
+  transition: background 0.3s ease;
+}
+
+.info-label {
+  font-weight: 600;
+  color: #667b77;
+  min-width: 150px;
+}
+
+.info-value {
+  color: #334e4a;
+}
+
+/* =========================================================
+   PROFILE FORM
+   ========================================================= */
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #3d5d59;
+}
+
+.form-group input {
+  padding: 0.8rem;
+
+  border: 2px solid #e0e7e5;
+  border-radius: 8px;
+
+  font-size: 1rem;
+
+  color: #334e4a;
+  background: white;
+
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+
+  border-color: #26b8a9;
+
+  box-shadow:
+    0 0 0 3px rgba(13, 148, 136, 0.09);
+}
+
+/* =========================================================
+   FORM ACTIONS
+   ========================================================= */
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.save-btn {
+  background: linear-gradient(
+    135deg,
+    #26b8a9,
+    #159f91
+  );
+
+  color: white;
+
+  border: none;
+
+  padding: 0.8rem 1.5rem;
+
+  border-radius: 25px;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  box-shadow:
+    0 4px 10px rgba(13, 148, 136, 0.14);
+}
+
+.save-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 6px 14px rgba(13, 148, 136, 0.22);
+}
+
+.cancel-btn {
+  background: #f0f3f2;
+  color: #667b77;
+
+  border: none;
+
+  padding: 0.8rem 1.5rem;
+
+  border-radius: 25px;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.cancel-btn:hover {
+  background: #e3e9e7;
+}
+
+/* =========================================================
+   STATS
+   ========================================================= */
+
+.stats-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(200px, 1fr));
+
+  gap: 1.5rem;
+
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: linear-gradient(
+    135deg,
+    #26b8a9,
+    #159f91
+  );
+
+  color: white;
+
+  padding: 2rem;
+
+  border-radius: 15px;
+
+  text-align: center;
+
+  box-shadow:
+    0 4px 10px rgba(13, 148, 136, 0.15);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 7px 16px rgba(13, 148, 136, 0.22);
+}
+
+.stat-icon {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.stat-value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* =========================================================
+   LISTS
+   ========================================================= */
+
+.notes-list,
+.timer-list,
+.chats-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* =========================================================
+   NOTE SUMMARY
+   ========================================================= */
+
+.note-summary {
+  padding: 1rem;
+
+  background: #f7faf9;
+
+  border-radius: 8px;
+
+  border-left: 4px solid #159f91;
+}
+
+.note-summary h3 {
+  color: #334e4a;
+  margin-bottom: 0.5rem;
+}
+
+.note-summary p {
+  color: #667b77;
+  margin-bottom: 0.5rem;
+}
+
+.note-date {
+  font-size: 0.85rem;
+  color: #999;
+}
+
+/* =========================================================
+   TIMER
+   ========================================================= */
+
+.timer-item {
+  padding: 1rem;
+
+  background: #f7faf9;
+
+  border-radius: 8px;
+
+  border-left: 4px solid #26b8a9;
+}
+
+.timer-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.timer-duration {
+  font-weight: 600;
+  color: #334e4a;
+  font-size: 1.1rem;
+}
+
+.timer-date {
+  font-size: 0.9rem;
+  color: #667b77;
+}
+
+/* =========================================================
+   CHAT SUMMARY
+   ========================================================= */
+
+.chat-summary {
+  padding: 1rem;
+
+  background: #f7faf9;
+
+  border-radius: 8px;
+
+  border-left: 4px solid #159f91;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-message-count {
+  font-weight: 600;
+  color: #334e4a;
+}
+
+.chat-date {
+  font-size: 0.9rem;
+  color: #667b77;
+}
+
+/* =========================================================
+   LOADING / ERROR
+   ========================================================= */
+
+.loading,
+.error {
+  text-align: center;
+
+  padding: 3rem;
+
+  font-size: 1.2rem;
+
+  color: #667b77;
+}
+
+/* =========================================================
+   DARK THEME
+   ThemeContext:
+   <html data-theme="dark">
+   ========================================================= */
+
+[data-theme="dark"] .profile-container {
+  background:
+    radial-gradient(
+      circle at 15% 15%,
+      rgba(45, 212, 191, 0.08),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 85% 85%,
+      rgba(20, 184, 166, 0.06),
+      transparent 30%
+    ),
+    #081416;
+
+  color: #e0f4f1;
+}
+
+[data-theme="dark"] .profile-header {
+  background: rgba(13, 28, 31, 0.90);
+
+  border-color: rgba(45, 212, 191, 0.13);
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.30),
+    0 0 18px rgba(13, 148, 136, 0.035);
+}
+
+[data-theme="dark"] .profile-header h1 {
+  /* Darker teal than before */
+  color: #3fc5b5;
+
+  /* Very subtle glow */
+  text-shadow:
+    0 0 5px rgba(63, 197, 181, 0.18),
+    0 0 10px rgba(63, 197, 181, 0.06);
+}
+
+[data-theme="dark"] .profile-section {
+  background: rgba(13, 28, 31, 0.88);
+
+  border-color: rgba(45, 212, 191, 0.11);
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.28),
+    0 0 15px rgba(13, 148, 136, 0.025);
+}
+
+[data-theme="dark"] .section-header {
+  border-bottom-color: rgba(148, 163, 184, 0.12);
+}
+
+[data-theme="dark"] .section-header h2 {
+  color: #e0f4f1;
+}
+
+/* =========================================================
+   DARK INFO
+   ========================================================= */
+
+[data-theme="dark"] .info-item {
+  background: rgba(19, 40, 43, 0.85);
+
+  border-color: rgba(45, 212, 191, 0.07);
+}
+
+[data-theme="dark"] .info-label {
+  color: #8eaaa6;
+}
+
+[data-theme="dark"] .info-value {
+  color: #d5ebe7;
+}
+
+/* =========================================================
+   DARK FORM
+   ========================================================= */
+
+[data-theme="dark"] .form-group label {
+  color: #a6c4bf;
+}
+
+[data-theme="dark"] .form-group input {
+  background: #102326;
+
+  color: #e0f4f1;
+
+  border-color: #29494a;
+}
+
+[data-theme="dark"] .form-group input:focus {
+  border-color: #26b8a9;
+
+  box-shadow:
+    0 0 0 3px rgba(13, 148, 136, 0.10);
+}
+
+/* =========================================================
+   DARK CANCEL
+   ========================================================= */
+
+[data-theme="dark"] .cancel-btn {
+  background: rgba(148, 163, 184, 0.08);
+
+  color: #a6bfbb;
+
+  border: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+[data-theme="dark"] .cancel-btn:hover {
+  background: rgba(148, 163, 184, 0.14);
+}
+
+/* =========================================================
+   DARK LIST ITEMS
+   ========================================================= */
+
+[data-theme="dark"] .note-summary,
+[data-theme="dark"] .timer-item,
+[data-theme="dark"] .chat-summary {
+  background: rgba(19, 40, 43, 0.82);
+}
+
+[data-theme="dark"] .note-summary h3,
+[data-theme="dark"] .timer-duration,
+[data-theme="dark"] .chat-message-count {
+  color: #d7eee9;
+}
+
+[data-theme="dark"] .note-summary p {
+  color: #9bb7b2;
+}
+
+[data-theme="dark"] .note-date,
+[data-theme="dark"] .timer-date,
+[data-theme="dark"] .chat-date {
+  color: #78918d;
+}
+
+/* =========================================================
+   DARK LOADING
+   ========================================================= */
+
+[data-theme="dark"] .loading,
+[data-theme="dark"] .error {
+  color: #9bb7b2;
+}
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .profile-content {
+    padding: 1rem;
+  }
+
+  .section-header {
+    flex-direction: column;
+
+    gap: 1rem;
+
+    align-items: stretch;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .timer-info,
+  .chat-summary {
+    flex-direction: column;
+
+    gap: 0.5rem;
+
+    align-items: flex-start;
+  }
+
+  .info-item {
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .info-label {
+    min-width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-content {
+    padding: 0.75rem;
+  }
+
+  .profile-header {
+    border-radius: 13px;
+    padding: 1.5rem 1rem;
+  }
+
+  .profile-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .profile-section {
+    padding: 1.2rem;
+    border-radius: 13px;
+  }
+
+  .section-header h2 {
+    font-size: 1.35rem;
+  }
+
+  .stat-card {
+    padding: 1.5rem;
+  }
+
+  .stat-value {
+    font-size: 2rem;
+  }
+}
+

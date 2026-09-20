@@ -1,0 +1,739 @@
+/* =========================================================
+   HOME PAGE — TEAL + MIDNIGHT
+   ========================================================= */
+
+.home-container {
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at 15% 15%,
+      rgba(45, 212, 191, 0.10),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 85% 85%,
+      rgba(20, 184, 166, 0.08),
+      transparent 30%
+    ),
+    #07131f;
+
+  color: #e5fdf9;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.home-content {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 3rem 2rem 4rem;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.home-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 2.5rem 2rem;
+
+  background: rgba(15, 35, 49, 0.78);
+
+  border: 1px solid rgba(45, 212, 191, 0.16);
+  border-radius: 22px;
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.25);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.welcome-message {
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: #ecfffc;
+
+  margin-bottom: 0.7rem;
+
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  font-size: 1.05rem;
+  color: #9ac8c3;
+}
+
+/* =========================================================
+   NOTES SECTION
+   ========================================================= */
+
+.notes-section {
+  background: rgba(10, 29, 42, 0.82);
+
+  border: 1px solid rgba(45, 212, 191, 0.14);
+  border-radius: 22px;
+
+  padding: 2rem;
+
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.28);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* =========================================================
+   NOTES HEADER
+   ========================================================= */
+
+.notes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 2rem;
+  padding-bottom: 1.2rem;
+
+  border-bottom: 1px solid rgba(148, 163, 184, 0.14);
+}
+
+.notes-header h2 {
+  color: #e6fffb;
+  font-size: 1.7rem;
+  margin: 0;
+}
+
+/* =========================================================
+   ADD NOTE BUTTON
+   ========================================================= */
+
+.add-note-btn {
+  background: linear-gradient(
+    135deg,
+    #14b8a6,
+    #0d9488
+  );
+
+  color: #ffffff;
+
+  border: none;
+
+  padding: 0.75rem 1.4rem;
+
+  border-radius: 12px;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+
+  box-shadow:
+    0 8px 20px rgba(20, 184, 166, 0.18);
+}
+
+.add-note-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 28px rgba(45, 212, 191, 0.28);
+}
+
+/* =========================================================
+   NOTE FORM
+   ========================================================= */
+
+.note-form-container {
+  margin-bottom: 2rem;
+
+  padding: 1.5rem;
+
+  background: rgba(7, 19, 31, 0.65);
+
+  border: 1px solid rgba(45, 212, 191, 0.15);
+  border-radius: 16px;
+}
+
+.note-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.note-input,
+.note-textarea {
+  width: 100%;
+
+  padding: 1rem 1.1rem;
+
+  background: #0c2230;
+
+  color: #e5fdf9;
+
+  border: 1px solid rgba(148, 163, 184, 0.18);
+
+  border-radius: 11px;
+
+  font-size: 1rem;
+  font-family: inherit;
+
+  transition: all 0.2s ease;
+
+  box-sizing: border-box;
+}
+
+.note-input::placeholder,
+.note-textarea::placeholder {
+  color: #72938f;
+}
+
+.note-input:focus,
+.note-textarea:focus {
+  outline: none;
+
+  border-color: #2dd4bf;
+
+  box-shadow:
+    0 0 0 3px rgba(45, 212, 191, 0.10);
+}
+
+.note-input {
+  font-weight: 600;
+}
+
+.note-textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 0.8rem;
+}
+
+/* =========================================================
+   SAVE BUTTON
+   ========================================================= */
+
+.save-btn {
+  background: #14b8a6;
+
+  color: #ffffff;
+
+  border: none;
+
+  padding: 0.75rem 1.4rem;
+
+  border-radius: 11px;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.save-btn:hover {
+  background: #0d9488;
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   CANCEL BUTTON
+   ========================================================= */
+
+.cancel-btn {
+  background: rgba(148, 163, 184, 0.10);
+
+  color: #b7cfcc;
+
+  border: 1px solid rgba(148, 163, 184, 0.15);
+
+  padding: 0.75rem 1.4rem;
+
+  border-radius: 11px;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.cancel-btn:hover {
+  background: rgba(148, 163, 184, 0.17);
+}
+
+/* =========================================================
+   NOTES GRID
+   ========================================================= */
+
+.notes-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fill, minmax(280px, 1fr));
+
+  gap: 1.3rem;
+}
+
+/* =========================================================
+   NOTE CARD
+   ========================================================= */
+
+.note-card {
+  position: relative;
+
+  background: linear-gradient(
+    145deg,
+    rgba(17, 43, 57, 0.95),
+    rgba(10, 31, 45, 0.95)
+  );
+
+  padding: 1.4rem;
+
+  border-radius: 17px;
+
+  border: 1px solid rgba(45, 212, 191, 0.10);
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.20);
+
+  transition: all 0.25s ease;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 190px;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+}
+
+.note-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 3px;
+  height: 100%;
+
+  background: #2dd4bf;
+
+  opacity: 0.65;
+}
+
+.note-card:hover {
+  transform: translateY(-4px);
+
+  border-color:
+    rgba(45, 212, 191, 0.28);
+
+  box-shadow:
+    0 15px 32px rgba(0, 0, 0, 0.30);
+}
+
+/* =========================================================
+   NOTE HEADER
+   ========================================================= */
+
+.note-header {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 1rem;
+
+  margin-bottom: 1rem;
+}
+
+.note-title {
+  font-size: 1.2rem;
+
+  color: #e7fffb;
+
+  margin: 0;
+
+  flex: 1;
+
+  word-break: break-word;
+}
+
+.note-actions {
+  display: flex;
+  gap: 0.35rem;
+}
+
+.edit-btn,
+.delete-btn {
+  background: rgba(148, 163, 184, 0.08);
+
+  border: 1px solid rgba(148, 163, 184, 0.10);
+
+  font-size: 1rem;
+
+  cursor: pointer;
+
+  padding: 0.35rem;
+
+  border-radius: 8px;
+
+  transition: all 0.2s ease;
+}
+
+.edit-btn:hover {
+  background: rgba(45, 212, 191, 0.12);
+
+  border-color:
+    rgba(45, 212, 191, 0.25);
+}
+
+.delete-btn:hover {
+  background: rgba(248, 113, 113, 0.10);
+}
+
+/* =========================================================
+   NOTE CONTENT
+   ========================================================= */
+
+.note-content {
+  color: #a9c5c1;
+
+  line-height: 1.65;
+
+  flex: 1;
+
+  margin-bottom: 1rem;
+
+  white-space: pre-wrap;
+
+  word-wrap: break-word;
+}
+
+/* =========================================================
+   NOTE FOOTER
+   ========================================================= */
+
+.note-footer {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  padding-top: 0.9rem;
+
+  border-top:
+    1px solid rgba(148, 163, 184, 0.10);
+}
+
+.note-date {
+  font-size: 0.78rem;
+  color: #668782;
+}
+
+/* =========================================================
+   EMPTY + LOADING
+   ========================================================= */
+
+.empty-state {
+  text-align: center;
+
+  padding: 4rem 2rem;
+
+  color: #789792;
+
+  font-size: 1rem;
+
+  grid-column: 1 / -1;
+}
+
+.loading {
+  text-align: center;
+
+  padding: 5rem 2rem;
+
+  font-size: 1.1rem;
+
+  color: #8eb5b0;
+}
+
+/* =========================================================
+   LIGHT MODE
+   Works with ThemeContext:
+   <html data-theme="light">
+   ========================================================= */
+
+[data-theme="light"] .home-container {
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(45, 212, 191, 0.08),
+      transparent 28%
+    ),
+    #f3f8f7;
+
+  color: #17302e;
+}
+
+[data-theme="light"] .home-header,
+[data-theme="light"] .notes-section {
+  background: rgba(255, 255, 255, 0.88);
+
+  border-color:
+    rgba(13, 148, 136, 0.14);
+
+  box-shadow:
+    0 12px 35px rgba(15, 23, 42, 0.08);
+}
+
+[data-theme="light"] .welcome-message,
+[data-theme="light"] .notes-header h2 {
+  color: #163b38;
+}
+
+[data-theme="light"] .subtitle {
+  color: #66817d;
+}
+
+[data-theme="light"] .note-form-container {
+  background: #f4f9f8;
+
+  border-color:
+    rgba(13, 148, 136, 0.13);
+}
+
+[data-theme="light"] .note-input,
+[data-theme="light"] .note-textarea {
+  background: #ffffff;
+
+  color: #183532;
+
+  border-color: #d7e7e4;
+}
+
+[data-theme="light"] .note-input::placeholder,
+[data-theme="light"] .note-textarea::placeholder {
+  color: #8aa19e;
+}
+
+[data-theme="light"] .note-card {
+  background: linear-gradient(
+    145deg,
+    #ffffff,
+    #f1f8f7
+  );
+
+  border-color:
+    rgba(13, 148, 136, 0.12);
+
+  box-shadow:
+    0 8px 22px rgba(15, 23, 42, 0.07);
+}
+
+[data-theme="light"] .note-title {
+  color: #173b38;
+}
+
+[data-theme="light"] .note-content {
+  color: #526f6b;
+}
+
+[data-theme="light"] .note-date {
+  color: #829b97;
+}
+
+[data-theme="light"] .empty-state {
+  color: #6d8884;
+}
+
+[data-theme="light"] .loading {
+  color: #66817d;
+}
+
+[data-theme="light"] .cancel-btn {
+  color: #42615d;
+
+  background: rgba(15, 118, 110, 0.06);
+
+  border-color:
+    rgba(15, 118, 110, 0.15);
+}
+
+[data-theme="light"] .edit-btn,
+[data-theme="light"] .delete-btn {
+  background: rgba(15, 118, 110, 0.05);
+
+  border-color:
+    rgba(15, 118, 110, 0.10);
+}
+
+/* =========================================================
+   DARK MODE
+   Explicitly tied to ThemeContext
+   ========================================================= */
+
+[data-theme="dark"] .home-container {
+  background:
+    radial-gradient(
+      circle at 15% 15%,
+      rgba(45, 212, 191, 0.10),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 85% 85%,
+      rgba(20, 184, 166, 0.08),
+      transparent 30%
+    ),
+    #07131f;
+
+  color: #e5fdf9;
+}
+
+[data-theme="dark"] .home-header {
+  background: rgba(15, 35, 49, 0.78);
+}
+
+[data-theme="dark"] .notes-section {
+  background: rgba(10, 29, 42, 0.82);
+}
+
+[data-theme="dark"] .note-form-container {
+  background: rgba(7, 19, 31, 0.65);
+}
+
+[data-theme="dark"] .note-input,
+[data-theme="dark"] .note-textarea {
+  background: #0c2230;
+
+  color: #e5fdf9;
+}
+
+[data-theme="dark"] .note-card {
+  background: linear-gradient(
+    145deg,
+    rgba(17, 43, 57, 0.95),
+    rgba(10, 31, 45, 0.95)
+  );
+}
+
+/* =========================================================
+   RESPONSIVE — TABLET / MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .home-content {
+    padding:
+      2rem
+      1rem
+      3rem;
+  }
+
+  .home-header {
+    padding:
+      2rem
+      1.2rem;
+
+    margin-bottom: 1.3rem;
+  }
+
+  .welcome-message {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+  }
+
+  .notes-section {
+    padding: 1.2rem;
+  }
+
+  .notes-header {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 1rem;
+  }
+
+  .add-note-btn {
+    width: 100%;
+  }
+
+  .notes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .save-btn,
+  .cancel-btn {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE — SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+  .home-content {
+    padding:
+      1.2rem
+      0.75rem
+      2.5rem;
+  }
+
+  .home-header {
+    border-radius: 17px;
+
+    padding:
+      1.7rem
+      1rem;
+  }
+
+  .welcome-message {
+    font-size: 1.65rem;
+  }
+
+  .notes-section {
+    padding: 1rem;
+
+    border-radius: 17px;
+  }
+
+  .notes-header h2 {
+    font-size: 1.4rem;
+  }
+
+  .note-card {
+    padding: 1.2rem;
+  }
+
+  .note-title {
+    font-size: 1.1rem;
+  }
+
+  .note-content {
+    font-size: 0.92rem;
+  }
+}

@@ -1,0 +1,641 @@
+/* =========================================================
+   VIRTUAL ROOM — TEAL + MIDNIGHT NAVBAR
+   ========================================================= */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  padding: 0.85rem 2rem;
+
+  background: rgba(7, 26, 28, 0.88);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  color: #e6fffb;
+
+  border-bottom: 1px solid rgba(45, 212, 191, 0.18);
+
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.25),
+    0 0 25px rgba(45, 212, 191, 0.05);
+
+  transition:
+    background 0.35s ease,
+    color 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  max-width: 1450px;
+  margin: 0 auto;
+
+  gap: 1.5rem;
+}
+
+/* =========================================================
+   LEFT SECTION
+   ========================================================= */
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  min-width: max-content;
+}
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+
+  gap: 0.65rem;
+
+  color: #e6fffb;
+  text-decoration: none;
+
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+.navbar-logo:hover {
+  transform: translateY(-1px);
+  color: #5eead4;
+}
+
+.logo-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 34px;
+  height: 34px;
+
+  border-radius: 10px;
+
+  background: linear-gradient(
+    135deg,
+    #2dd4bf,
+    #0f766e
+  );
+
+  color: #06201f;
+
+  font-size: 1.15rem;
+  font-weight: 900;
+
+  box-shadow:
+    0 0 18px rgba(45, 212, 191, 0.35);
+
+  transition: transform 0.3s ease;
+}
+
+.navbar-logo:hover .logo-icon {
+  transform: rotate(8deg) scale(1.05);
+}
+
+.logo-text {
+  white-space: nowrap;
+}
+
+/* =========================================================
+   CLOCK
+   ========================================================= */
+
+.clock-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  padding-left: 1.2rem;
+
+  border-left: 1px solid rgba(94, 234, 212, 0.18);
+}
+
+.current-time {
+  color: #5eead4;
+
+  font-size: 1.15rem;
+  font-weight: 700;
+
+  font-family: "Courier New", monospace;
+  letter-spacing: 1px;
+
+  text-shadow:
+    0 0 12px rgba(45, 212, 191, 0.25);
+}
+
+.current-date {
+  margin-top: 2px;
+
+  color: rgba(230, 255, 251, 0.62);
+
+  font-size: 0.75rem;
+  letter-spacing: 0.3px;
+}
+
+/* =========================================================
+   RIGHT SECTION
+   ========================================================= */
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 0.35rem;
+
+  flex-wrap: wrap;
+}
+
+/* =========================================================
+   NAVIGATION LINKS
+   ========================================================= */
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 0.4rem;
+
+  padding: 0.55rem 0.8rem;
+
+  color: rgba(230, 255, 251, 0.82);
+
+  text-decoration: none;
+
+  font-size: 0.9rem;
+  font-weight: 500;
+
+  border-radius: 10px;
+
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.nav-link span {
+  color: #5eead4;
+
+  font-size: 0.95rem;
+
+  transition: transform 0.25s ease;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+
+  background: rgba(45, 212, 191, 0.10);
+
+  box-shadow:
+    0 0 16px rgba(45, 212, 191, 0.08);
+
+  transform: translateY(-1px);
+}
+
+.nav-link:hover span {
+  transform: scale(1.12);
+}
+
+/* =========================================================
+   THEME TOGGLE
+   ========================================================= */
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 38px;
+  height: 38px;
+
+  margin-left: 0.35rem;
+
+  border: 1px solid rgba(45, 212, 191, 0.25);
+  border-radius: 50%;
+
+  background: rgba(45, 212, 191, 0.08);
+
+  color: #5eead4;
+
+  font-size: 1.05rem;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: rotate(15deg) scale(1.08);
+
+  background: rgba(45, 212, 191, 0.16);
+
+  box-shadow:
+    0 0 18px rgba(45, 212, 191, 0.22);
+}
+
+/* =========================================================
+   USER BADGE
+   ========================================================= */
+
+.user-name {
+  display: inline-flex;
+  align-items: center;
+
+  margin-left: 0.35rem;
+
+  padding: 0.5rem 0.85rem;
+
+  color: #ccfbf1;
+
+  background: rgba(45, 212, 191, 0.08);
+
+  border: 1px solid rgba(45, 212, 191, 0.15);
+
+  border-radius: 20px;
+
+  font-size: 0.82rem;
+  font-weight: 500;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+   LOGOUT
+   ========================================================= */
+
+.logout-btn {
+  margin-left: 0.25rem;
+
+  padding: 0.55rem 1rem;
+
+  border: 1px solid rgba(94, 234, 212, 0.35);
+
+  border-radius: 10px;
+
+  background: transparent;
+
+  color: #5eead4;
+
+  font-size: 0.85rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.logout-btn:hover {
+  background: #2dd4bf;
+
+  color: #06201f;
+
+  border-color: #2dd4bf;
+
+  box-shadow:
+    0 0 18px rgba(45, 212, 191, 0.25);
+
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   LIGHT THEME
+   IMPORTANT:
+   ThemeContext uses html[data-theme="light"]
+   ========================================================= */
+
+html[data-theme="light"] .navbar {
+  background: rgba(244, 251, 250, 0.92);
+
+  color: #123033;
+
+  border-bottom: 1px solid rgba(15, 118, 110, 0.14);
+
+  box-shadow:
+    0 8px 25px rgba(15, 118, 110, 0.08);
+}
+
+html[data-theme="light"] .navbar-logo {
+  color: #123033;
+}
+
+html[data-theme="light"] .navbar-logo:hover {
+  color: #0f766e;
+}
+
+html[data-theme="light"] .current-time {
+  color: #0f766e;
+  text-shadow: none;
+}
+
+html[data-theme="light"] .current-date {
+  color: rgba(18, 48, 51, 0.58);
+}
+
+html[data-theme="light"] .clock-section {
+  border-left-color: rgba(15, 118, 110, 0.15);
+}
+
+html[data-theme="light"] .nav-link {
+  color: rgba(18, 48, 51, 0.78);
+}
+
+html[data-theme="light"] .nav-link span {
+  color: #0f766e;
+}
+
+html[data-theme="light"] .nav-link:hover {
+  color: #0f766e;
+
+  background: rgba(15, 118, 110, 0.08);
+
+  box-shadow: none;
+}
+
+html[data-theme="light"] .theme-toggle {
+  color: #0f766e;
+
+  background: rgba(15, 118, 110, 0.07);
+
+  border-color: rgba(15, 118, 110, 0.18);
+}
+
+html[data-theme="light"] .theme-toggle:hover {
+  background: rgba(15, 118, 110, 0.13);
+
+  box-shadow:
+    0 0 15px rgba(15, 118, 110, 0.12);
+}
+
+html[data-theme="light"] .user-name {
+  color: #0f5f59;
+
+  background: rgba(15, 118, 110, 0.07);
+
+  border-color: rgba(15, 118, 110, 0.13);
+}
+
+html[data-theme="light"] .logout-btn {
+  color: #0f766e;
+
+  border-color: rgba(15, 118, 110, 0.3);
+}
+
+html[data-theme="light"] .logout-btn:hover {
+  background: #0f766e;
+
+  color: white;
+
+  border-color: #0f766e;
+}
+
+/* =========================================================
+   DARK THEME
+   ThemeContext sets:
+   html[data-theme="dark"]
+   ========================================================= */
+
+html[data-theme="dark"] .navbar {
+  background: rgba(7, 26, 28, 0.94);
+
+  color: #e6fffb;
+
+  border-bottom: 1px solid rgba(45, 212, 191, 0.20);
+
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.35),
+    0 0 30px rgba(45, 212, 191, 0.06);
+}
+
+html[data-theme="dark"] .navbar-logo {
+  color: #e6fffb;
+}
+
+html[data-theme="dark"] .navbar-logo:hover {
+  color: #5eead4;
+}
+
+html[data-theme="dark"] .current-time {
+  color: #5eead4;
+
+  text-shadow:
+    0 0 12px rgba(45, 212, 191, 0.30);
+}
+
+html[data-theme="dark"] .current-date {
+  color: rgba(230, 255, 251, 0.62);
+}
+
+html[data-theme="dark"] .clock-section {
+  border-left-color: rgba(94, 234, 212, 0.18);
+}
+
+html[data-theme="dark"] .nav-link {
+  color: rgba(230, 255, 251, 0.82);
+}
+
+html[data-theme="dark"] .nav-link span {
+  color: #5eead4;
+}
+
+html[data-theme="dark"] .nav-link:hover {
+  color: #ffffff;
+
+  background: rgba(45, 212, 191, 0.10);
+
+  box-shadow:
+    0 0 16px rgba(45, 212, 191, 0.08);
+}
+
+html[data-theme="dark"] .theme-toggle {
+  color: #5eead4;
+
+  background: rgba(45, 212, 191, 0.08);
+
+  border-color: rgba(45, 212, 191, 0.25);
+}
+
+html[data-theme="dark"] .theme-toggle:hover {
+  background: rgba(45, 212, 191, 0.16);
+
+  box-shadow:
+    0 0 18px rgba(45, 212, 191, 0.22);
+}
+
+html[data-theme="dark"] .user-name {
+  color: #ccfbf1;
+
+  background: rgba(45, 212, 191, 0.08);
+
+  border-color: rgba(45, 212, 191, 0.15);
+}
+
+html[data-theme="dark"] .logout-btn {
+  color: #5eead4;
+
+  border-color: rgba(94, 234, 212, 0.35);
+}
+
+html[data-theme="dark"] .logout-btn:hover {
+  background: #2dd4bf;
+
+  color: #06201f;
+
+  border-color: #2dd4bf;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+  .navbar {
+    padding: 0.8rem 1.25rem;
+  }
+
+  .navbar-container {
+    flex-wrap: wrap;
+  }
+
+  .navbar-right {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+  .navbar {
+    padding: 0.75rem 0.8rem;
+  }
+
+  .navbar-container {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .navbar-left {
+    width: 100%;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .navbar-logo {
+    font-size: 1.15rem;
+  }
+
+  .logo-icon {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+  }
+
+  .clock-section {
+    padding-left: 0.8rem;
+  }
+
+  .current-time {
+    font-size: 0.95rem;
+  }
+
+  .current-date {
+    font-size: 0.68rem;
+  }
+
+  .navbar-right {
+    width: 100%;
+    justify-content: center;
+    gap: 0.25rem;
+  }
+
+  .nav-link {
+    padding: 0.45rem 0.55rem;
+    font-size: 0.78rem;
+  }
+
+  .nav-link span {
+    display: none;
+  }
+
+  .user-name {
+    font-size: 0.75rem;
+    padding: 0.45rem 0.7rem;
+  }
+
+  .logout-btn {
+    padding: 0.45rem 0.75rem;
+    font-size: 0.78rem;
+  }
+
+  .theme-toggle {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .navbar-left {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .clock-section {
+    align-items: center;
+    padding-left: 0;
+    border-left: none;
+  }
+
+  .navbar-right {
+    gap: 0.15rem;
+  }
+
+  .nav-link {
+    padding: 0.4rem 0.45rem;
+    font-size: 0.72rem;
+  }
+
+  .user-name {
+    max-width: 110px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

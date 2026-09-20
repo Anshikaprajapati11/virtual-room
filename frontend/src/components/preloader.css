@@ -1,0 +1,614 @@
+/* =========================================================
+   VIRTUAL ROOM — PRELOADER
+   Electric Teal + Midnight Theme
+   ========================================================= */
+
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 100vh;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 45%,
+      rgba(20, 184, 166, 0.16),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(45, 212, 191, 0.08),
+      transparent 30%
+    ),
+    #061719;
+
+  color: #d9fffa;
+}
+
+
+/* =========================================================
+   SOFT BACKGROUND GLOW
+   ========================================================= */
+
+.preloader::before {
+  content: "";
+
+  position: absolute;
+  width: 420px;
+  height: 420px;
+
+  border-radius: 50%;
+
+  background: rgba(20, 184, 166, 0.08);
+
+  filter: blur(80px);
+
+  animation: preloaderAmbient 3s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.preloader-content {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  animation: contentAppear 0.8s ease-out forwards;
+}
+
+
+/* =========================================================
+   ICON WRAPPER
+   ========================================================= */
+
+.preloader-icon-wrapper {
+  position: relative;
+
+  width: 105px;
+  height: 105px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   OUTER GLOWING FORMING BOX
+   ========================================================= */
+
+.preloader-forming-ring {
+  position: absolute;
+
+  width: 92px;
+  height: 92px;
+
+  box-sizing: border-box;
+
+  border-radius: 28px;
+
+  /* COMPLETE BORDER */
+  border: 2px solid rgba(45, 212, 191, 0.60);
+
+  box-shadow:
+    0 0 12px rgba(45, 212, 191, 0.30),
+    0 0 28px rgba(20, 184, 166, 0.18),
+    inset 0 0 12px rgba(45, 212, 191, 0.08);
+
+  opacity: 0;
+
+  animation:
+    formingRing 1.4s ease-out forwards,
+    ringPulse 2s ease-in-out 1.4s infinite;
+}
+
+
+/* =========================================================
+   MAIN ICON
+   ========================================================= */
+
+.preloader-icon {
+  position: relative;
+
+  width: 78px;
+  height: 78px;
+
+  border-radius: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      145deg,
+      #22cfc0,
+      #0f9f94
+    );
+
+  box-shadow:
+    0 0 15px rgba(45, 212, 191, 0.55),
+    0 0 35px rgba(20, 184, 166, 0.30),
+    inset 0 1px 2px rgba(255, 255, 255, 0.25);
+
+  opacity: 0;
+
+  transform: scale(0.25) rotate(-20deg);
+
+  animation:
+    iconForm 1.25s cubic-bezier(0.2, 0.8, 0.2, 1) 0.35s forwards,
+    iconGlow 2.5s ease-in-out 1.6s infinite;
+}
+
+
+/* =========================================================
+   INNER DIAMOND / VIRTUAL ROOM SYMBOL
+   ========================================================= */
+
+.preloader-diamond {
+  width: 24px;
+  height: 24px;
+
+  border: 3px solid #073b39;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform: rotate(45deg) scale(0);
+
+  opacity: 0;
+
+  animation:
+    diamondForm 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) 1.05s
+    forwards;
+}
+
+
+.preloader-diamond span {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 2px;
+
+  background: #073b39;
+
+  opacity: 0;
+
+  transform: rotate(-45deg) scale(0);
+
+  animation:
+    diamondCore 0.6s ease-out 1.45s forwards;
+}
+
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.preloader-title {
+  margin: 0;
+
+  font-size: 2.5rem;
+  font-weight: 700;
+
+  letter-spacing: 4px;
+
+  color: #72f5e8;
+
+  text-shadow:
+    0 0 10px rgba(45, 212, 191, 0.35),
+    0 0 25px rgba(20, 184, 166, 0.18);
+
+  opacity: 0;
+
+  transform: translateY(14px);
+
+  animation:
+    titleReveal 0.8s ease-out 1.65s forwards;
+}
+
+
+/* =========================================================
+   SUBTITLE
+   ========================================================= */
+
+.preloader-subtitle {
+  margin: 8px 0 0;
+
+  font-size: 0.95rem;
+  font-weight: 400;
+
+  letter-spacing: 1.5px;
+
+  color: rgba(190, 245, 239, 0.70);
+
+  opacity: 0;
+
+  transform: translateY(8px);
+
+  animation:
+    subtitleReveal 0.8s ease-out 1.95s forwards;
+}
+
+
+/* =========================================================
+   LOADING LINE
+   ========================================================= */
+
+.preloader-line {
+  width: 190px;
+  height: 3px;
+
+  margin-top: 28px;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  background: rgba(45, 212, 191, 0.12);
+
+  opacity: 0;
+
+  transform: scaleX(0.5);
+
+  animation:
+    lineAppear 0.5s ease-out 2.15s forwards;
+}
+
+
+.preloader-line-fill {
+  width: 0%;
+  height: 100%;
+
+  border-radius: inherit;
+
+  background:
+    linear-gradient(
+      90deg,
+      #14b8a6,
+      #5eead4,
+      #2dd4bf
+    );
+
+  box-shadow:
+    0 0 10px rgba(45, 212, 191, 0.7),
+    0 0 20px rgba(20, 184, 166, 0.35);
+
+  animation:
+    loadingProgress 0.75s ease-in-out 2.15s forwards;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@keyframes contentAppear {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   OUTER BOX FORMS
+   ========================================================= */
+
+@keyframes formingRing {
+
+  0% {
+    opacity: 0;
+    transform: scale(0.55) rotate(-90deg);
+  }
+
+  25% {
+    opacity: 0.35;
+  }
+
+  50% {
+    opacity: 0.70;
+    transform: scale(0.85) rotate(-35deg);
+  }
+
+  75% {
+    opacity: 1;
+    transform: scale(1.04) rotate(-8deg);
+  }
+
+  100% {
+    opacity: 0.85;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+
+/* =========================================================
+   MAIN ICON FORMS
+   ========================================================= */
+
+@keyframes iconForm {
+
+  0% {
+    opacity: 0;
+    transform: scale(0.25) rotate(-20deg);
+    filter: blur(5px);
+  }
+
+  35% {
+    opacity: 0.35;
+    transform: scale(0.55) rotate(-12deg);
+    filter: blur(2px);
+  }
+
+  70% {
+    opacity: 0.85;
+    transform: scale(1.08) rotate(-4deg);
+    filter: blur(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(-7deg);
+    filter: blur(0);
+  }
+}
+
+
+/* =========================================================
+   DIAMOND FORMS FROM CENTER
+   ========================================================= */
+
+@keyframes diamondForm {
+
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) scale(0);
+  }
+
+  60% {
+    opacity: 1;
+    transform: rotate(45deg) scale(1.15);
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotate(45deg) scale(1);
+  }
+}
+
+
+/* =========================================================
+   DIAMOND CENTER
+   ========================================================= */
+
+@keyframes diamondCore {
+
+  0% {
+    opacity: 0;
+    transform: rotate(-45deg) scale(0);
+  }
+
+  60% {
+    opacity: 1;
+    transform: rotate(-45deg) scale(1.25);
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotate(-45deg) scale(1);
+  }
+}
+
+
+/* =========================================================
+   OUTER BOX GLOW PULSE
+   ========================================================= */
+
+@keyframes ringPulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.55;
+
+    box-shadow:
+      0 0 12px rgba(45, 212, 191, 0.25),
+      0 0 28px rgba(20, 184, 166, 0.15),
+      inset 0 0 10px rgba(45, 212, 191, 0.05);
+  }
+
+  50% {
+    transform: scale(1.08);
+    opacity: 0.95;
+
+    box-shadow:
+      0 0 18px rgba(45, 212, 191, 0.45),
+      0 0 42px rgba(20, 184, 166, 0.25),
+      inset 0 0 15px rgba(45, 212, 191, 0.10);
+  }
+}
+
+
+/* =========================================================
+   ICON GLOW
+   ========================================================= */
+
+@keyframes iconGlow {
+
+  0%,
+  100% {
+    box-shadow:
+      0 0 15px rgba(45, 212, 191, 0.55),
+      0 0 35px rgba(20, 184, 166, 0.30),
+      inset 0 1px 2px rgba(255, 255, 255, 0.25);
+  }
+
+  50% {
+    box-shadow:
+      0 0 22px rgba(45, 212, 191, 0.75),
+      0 0 55px rgba(20, 184, 166, 0.42),
+      inset 0 1px 3px rgba(255, 255, 255, 0.30);
+  }
+}
+
+
+/* =========================================================
+   TITLE REVEAL
+   ========================================================= */
+
+@keyframes titleReveal {
+
+  0% {
+    opacity: 0;
+    transform: translateY(14px);
+    letter-spacing: 4px;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    letter-spacing: -0.5px;
+  }
+}
+
+
+/* =========================================================
+   SUBTITLE REVEAL
+   ========================================================= */
+
+@keyframes subtitleReveal {
+
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   LOADING LINE APPEAR
+   ========================================================= */
+
+@keyframes lineAppear {
+
+  from {
+    opacity: 0;
+    transform: scaleX(0.5);
+  }
+
+  to {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+
+/* =========================================================
+   LOADING PROGRESS
+   ========================================================= */
+
+@keyframes loadingProgress {
+
+  0% {
+    width: 0%;
+  }
+
+  40% {
+    width: 45%;
+  }
+
+  75% {
+    width: 78%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+
+/* =========================================================
+   BACKGROUND AMBIENT GLOW
+   ========================================================= */
+
+@keyframes preloaderAmbient {
+
+  0%,
+  100% {
+    transform: scale(0.9);
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .preloader-icon-wrapper {
+    width: 90px;
+    height: 90px;
+  }
+
+  .preloader-icon {
+    width: 68px;
+    height: 68px;
+    border-radius: 18px;
+  }
+
+  .preloader-forming-ring {
+    width: 80px;
+    height: 80px;
+    border-radius: 24px;
+  }
+
+  .preloader-title {
+    font-size: 2rem;
+  }
+
+  .preloader-subtitle {
+    font-size: 0.82rem;
+    letter-spacing: 1.1px;
+  }
+
+  .preloader-line {
+    width: 160px;
+  }
+}
