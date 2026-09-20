@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 // Base URL for API requests
-const API_URL =  'https://sritmip-backend.onrender.com/api';
+const API_URL = 'https://virtual-room-backend.vercel.app/api';
 
 // Create axios instance with default config
 const api = axios.create({
